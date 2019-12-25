@@ -1,0 +1,28 @@
+@startuml
+
+
+class SnakeTeam {
+    - Demon demons[];
+    - Snake cheerleader;
+    --
+    +public Snake getCheerleader()
+    +public Demon[] getDemons()
+    +public void generateTheCheerPattern(Space battleground, int x, int y)
+    +public void generateChangshePattern(Space battleground, int x, int y)
+    +public void generateChongePattern(Space battleground,  int x, int y)
+    +public void generateFangyuanPattern(Space battleground,  int x, int y)
+    +public void generateFengshiPattern(Space battleground,  int x, int y)
+    +public void generateHeyiPattern(Space battleground,  int x, int y)
+    +public void generateYanxingPattern(Space battleground,  int x, int y)
+    +public void generateYanyuePattern(Space battleground,  int x, int y)
+    +public void generateYulinPattern(Space battleground,  int x, int y)
+
+}
+
+SnakeTeam *-up- Demon :contains >
+SnakeTeam *-up- Snake :contains >
+SnakeTeam .up.|>SnakeTeamQueuePattern :implement
+SnakeTeam .up.|>SnakeTeamTeamQueuePattern :implement
+
+
+@enduml

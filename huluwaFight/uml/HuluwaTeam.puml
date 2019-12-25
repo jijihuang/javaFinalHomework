@@ -1,0 +1,24 @@
+@startuml
+
+
+class HuluwaTeam {
+    - Huluwa brothers[];
+    - Grandpa cheerleader;
+    --
+    +public Grandpa getCheerleader()
+    +public Huluwa getTheSpecificHuluwa(int i)
+    +public Huluwa[] getBrothers()
+    +public void randomQueue()
+    +public void bubbleSort()
+    +public void generateTheCheerPattern(Space battleground, int x, int y)
+    +public void generateChangshePattern(Space battleground, int x, int y)
+
+}
+
+HuluwaTeam *-up- Huluwa :contains >
+HuluwaTeam *-up- Grandpa :contains >
+HuluwaTeam .up.|>HuluwaTeamQueuePattern :implement
+HuluwaTeam .up.|>HuluwaTeamQueuePattern :implement
+
+
+@enduml
